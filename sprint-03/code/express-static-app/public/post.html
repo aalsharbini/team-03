@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/footer.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/post.css">
+    <link rel="icon" href="media/logo.ico" type="image/x-icon">
+		<title>IT For Hire</title>
+  </head>
+	
+  <body>
+    <div class="header">
+      <div class="header-contents">
+        <a href="#default" class="logo">IT FOR HIRE</a>
+        <div class="header-right">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+					<a class="active" href="post.html">Post</a>
+          <a href="about.html">About Us</a>
+          <a href="legal.html">Legal Notice</a>
+					<a href="login.html">Login</a>
+        </div>
+      </div>
+    </div>
+		
+		<main>
+			<h1>Post a Job</h1>
+			<form action="#" method="POST">
+				<div>
+					<label for="job-title">Job Title</label>
+					<input type="text" id="job-title" name="job-title" required>
+				</div>
+				<div>
+					<label for="company-name">Company Name</label>
+					<input type="text" id="company-name" name="company-name" required>
+				</div>
+				<div>
+					<label for="job-location">Job Location</label>
+					<input type="text" id="job-location" name="job-location" required>
+				</div>
+				<div>
+					<label for="job-type">Job Type</label>
+					<select id="job-type" name="job-type" required>
+						<option value="full-time">Full-time</option>
+						<option value="part-time">Part-time</option>
+						<option value="contract">Contract</option>
+						<option value="freelance">Freelance</option>
+						<option value="internship">Internship</option>
+						<option value="temporary">Temporary</option>
+					</select>
+				</div>
+				<div>
+					<label for="job-description">Job Description</label>
+					<textarea id="job-description" name="job-description" rows="5" required></textarea>
+				</div>
+				<div>
+					<label for="job-requirements">Job Requirements</label>
+					<textarea id="job-requirements" name="job-requirements" rows="5" required></textarea>
+				</div>
+				<div>
+					<label for="how-to-apply">How to Apply</label>
+					<textarea id="how-to-apply" name="how-to-apply" rows="5" required></textarea>
+				</div>
+				<button type="submit">Post Job</button>
+			</form>
+		</main>
+		
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h2 class="logo">IT FOR HIRE</h2>
+          <p>
+            We connect job seekers with employers in the IT industry.
+            Whether you're looking for your next gig or the perfect hire,
+            we're here to help.
+          </p>
+          <div class="contact">
+            <span><i class="fas fa-phone"></i>(312) 567-3000</span>
+            <span><i class="fas fa-envelope"></i>info@itforhire.com</span>
+          </div>
+          <div class="socials">
+            <a href="#"><img src="media/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="media/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="media/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="media/linkedin.png" alt="LinkedIn"></a>
+          </div>
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html">Browse Jobs</a></li>
+            <li><a href="post.html">Post a Job</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="legal.html">Legal Notice</a></li>
+            <li><a href="login.html">Log in</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact-form">
+          <h2>Contact Us</h2>
+          <form action="#" method="post">
+            <input type="email" name="email" class="text-input contact-input" placeholder="Your email address">
+            <textarea name="message" class="text-input contact-input" placeholder="Your message"></textarea>
+            <button type="submit" class="btn btn-big contact-btn">
+            <i class="fas fa-envelope"></i>
+            Send
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 IT FOR HIRE. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

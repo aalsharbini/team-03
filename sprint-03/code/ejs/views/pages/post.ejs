@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <%- include('../partials/head'); %>
+	<link rel="stylesheet" type="text/css" href="/css/post.css">
+</head>
+<body>
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+		<main>
+			<h1>Post a Job</h1>
+			<form action="#" method="POST">
+				<div>
+					<label for="job-title">Job Title</label>
+					<input type="text" id="job-title" name="job-title" required>
+				</div>
+				<div>
+					<label for="company-name">Company Name</label>
+					<input type="text" id="company-name" name="company-name" required>
+				</div>
+				<div>
+					<label for="job-location">Job Location</label>
+					<input type="text" id="job-location" name="job-location" required>
+				</div>
+				<div>
+					<label for="job-type">Job Type</label>
+					<select id="job-type" name="job-type" required>
+						<option value="full-time">Full-time</option>
+						<option value="part-time">Part-time</option>
+						<option value="contract">Contract</option>
+						<option value="freelance">Freelance</option>
+						<option value="internship">Internship</option>
+						<option value="temporary">Temporary</option>
+					</select>
+				</div>
+				<div>
+					<label for="job-description">Job Description</label>
+					<textarea id="job-description" name="job-description" rows="5" required></textarea>
+				</div>
+				<div>
+					<label for="job-requirements">Job Requirements</label>
+					<textarea id="job-requirements" name="job-requirements" rows="5" required></textarea>
+				</div>
+				<div>
+					<label for="how-to-apply">How to Apply</label>
+					<textarea id="how-to-apply" name="how-to-apply" rows="5" required></textarea>
+				</div>
+				<button type="submit">Post Job</button>
+			</form>
+		</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

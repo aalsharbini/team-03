@@ -1,0 +1,162 @@
+<!---Login Page, created by Gyuhwan Choi--->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="media/logo.ico" type="image/x-icon">
+    <!--Adding google platform library for authentication--->
+    <meta name="google-signin-client_id"
+      content="977570761979-ef0eu0u7di046smv9squ743sgla8iu7h.apps.googleusercontent.com">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <!---  <script src=js/script.js></script> --> 
+
+    <title>IT For Hire</title>
+  </head>
+
+
+  <body class="login">
+    <!---Adding navigation bar-->
+    <div class="header">
+      <div class="header-contents">
+        <a href="#default" class="logo">IT FOR HIRE</a>
+        <div class="header-right">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="post.html">Post</a>
+          <a href="about.html">About Us</a>
+          <a href="legal.html">Legal Notice</a>
+          <a class="active" href="login.html">Login</a>
+        </div>
+      </div>
+    </div>
+    <!---end of nav bar-->
+
+		<main>
+    <div class="login-box">
+      <div class="logo">
+        <img src="media/logo.png" alt="Logo">
+      </div>
+      <h1>Login</h1>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+				<input type="submit" value="Log In">
+				<center><p> OR </p></center>
+      </form>
+
+
+      <div id="g_id_onload" data-client_id="977570761979-ef0eu0u7di046smv9squ743sgla8iu7h.apps.googleusercontent.com"
+        data-context="signin" data-ux_mode="popup" data-callback="handleCredentialResponse" data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
+        data-text="signin_with" data-size="large" data-logo_alignment="left">
+      </div>
+    </div>
+		
+		
+		<script>
+  function decodeJwtResponse(token) {
+    let base64Url = token.split('.')[1]
+    let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    let jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+    return JSON.parse(jsonPayload)
+  }
+
+let responsePayload;
+
+function handleCredentialResponse(response) {
+  // decodeJwtResponse() is a custom function defined by you
+  // to decode the credential response.
+  responsePayload = decodeJwtResponse(response.credential);
+
+  console.log("ID: " + responsePayload.sub);
+  console.log('Full Name: ' + responsePayload.name);
+  console.log('Given Name: ' + responsePayload.given_name);
+  console.log('Family Name: ' + responsePayload.family_name);
+  console.log("Image URL: " + responsePayload.picture);
+  console.log("Email: " + responsePayload.email);
+} 
+		</script>
+		</main>
+    		
+    <!---removing old sign in button
+      <input type="submit" value="Login"> --->
+    <!------ old google authentication code
+      </div>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            </form>
+          </div>
+          <script>
+            function onSignIn(googleUser) {
+            	// get user profile information
+            	console.log(googleUser.getBasicProfile())
+            }
+
+            function signOut() {
+            	gapi.auth2.getAuthInstance().signOut().then(function () {
+            		console.log('user signed out')
+            	})
+            }
+          </script>
+          <button onclick="signOut()">Sign out</button> --->
+    <!--Adding script-->
+
+
+    <!---- footer code----->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h2 class="logo">IT FOR HIRE</h2>
+          <p>
+            We connect job seekers with employers in the IT industry.
+            Whether you're looking for your next gig or the perfect hire,
+            we're here to help.
+          </p>
+          <div class="contact">
+            <span><i class="fas fa-phone"></i>(312) 567-3000</span>
+            <span><i class="fas fa-envelope"></i>info@itforhire.com</span>
+          </div>
+          <div class="socials">
+            <a href="#"><img src="media/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="media/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="media/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="media/linkedin.png" alt="LinkedIn"></a>
+          </div>
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browse.html">Browse Jobs</a></li>
+            <li><a href="post.html">Post a Job</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="legal.html">Legal Notice</a></li>
+            <li><a href="login.html">Log in</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact-form">
+          <h2>Contact Us</h2>
+          <form action="#" method="post">
+            <input type="email" name="email" class="text-input contact-input" placeholder="Your email address">
+            <textarea name="message" class="text-input contact-input" placeholder="Your message"></textarea>
+            <button type="submit" class="btn btn-big contact-btn">
+            <i class="fas fa-envelope"></i>
+            Send
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 IT FOR HIRE. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="media/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" media="screen" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>IT For Hire</title>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html"<img src="media/logo.png" alt="itforhirelogo" class="logo">IT FOR HIRE</a>
+    <div class="header-right">
+      <a class="active" href="index.html">Home</a>
+      <a href="#browse">Browse</a>
+      <a href="#services">Services</a>
+      <a href="#about.html">About Us</a>
+      <a href="legal.html">Legal Notice</a>
+    </div>
+  </div>
+
+<h1>ABOUT US</h1>
+	<p>Founded in 2023, IT For Hire started as a dedicated platform for the IT world.</p>
+	<p>Our mission is to enable users to find professional IT services at a fingertip's notice.</p>
+	<h2>Interested in joining us?</h2>
+		<p>Get in touch with us at itforhirecareers@gmail.com
+</body>
+</html>

@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="header-contents">
+    <a href="#default" class="logo">IT FOR HIRE</a>
+    <div class="header-right">
+      <a id="" href="/">Home</a>
+      <a id="browse" href="browse">Browse</a>
+			<a id="post" href="post">Post</a>
+      <a id="about" href="about">About Us</a>
+      <a id="legal" href="legal">Legal Notice</a>
+			<a id="login" href="login">Login</a>
+    </div>
+  </div>
+</div>
+<script>
+  window.onload = function() {
+    const links = document.querySelectorAll('.header-right a');
+    const currentPage = window.location.pathname.split('/').pop();
+    for (let i = 0; i < links.length; i++) {
+      const link = links[i];
+      const id = link.getAttribute('id');
+      if (currentPage === id) {
+        link.classList.add('active');
+      }
+    }
+  };
+</script>
